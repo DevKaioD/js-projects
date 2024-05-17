@@ -107,3 +107,29 @@ body {
     font-size: 14px;
     display: none;
 }
+
+@media screen and (max-width: 896px) {
+
+    .weatherIcon {
+        width: 190px;
+    }
+
+    .weather h1 {
+        font-size: 60px;
+    }
+    
+    .weather h2 {
+        font-size: 35px;
+    }
+
+    .search input{
+        width: 10px;
+    }
+    .col img {
+        width: 35px;
+    }
+
+    .humidity, .wind {
+        font-size: 20px;
+    }
+}
