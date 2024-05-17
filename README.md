@@ -1,3 +1,1 @@
-Ignore it
-
-just one att to test
+This app is a weather reader, utilizing API to real-share the climates of cities and coutries
