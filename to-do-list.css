@@ -28,32 +28,32 @@
     margin-bottom: 20px;
 }
 
-.to-do input {
-    display: none;
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1d9b3;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
-.to-do input+label {
-    cursor: pointer;
-}
-
-.to-do input+label:before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    border-radius: 7px;
-    background-color: white;
-    border: 1px solid gray;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    margin-left: 5px;
-    margin-bottom: 3px;
-}
-
-.to-do input:checked+label:before {
-    background-image: url(images/check.svg);
-    background-color: #fc5000;
-    background-size: cover;
+input {
+    flex: 1;
     border: none;
-    padding: 1px;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #fc5000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
 }
