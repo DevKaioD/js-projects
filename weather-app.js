@@ -20,17 +20,17 @@ async function checkWeather(city) {
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h"
 
         if (data.weather[0].main == "Clouds") {
-            weatherIcon.src = "images/clouds.png"
+            weatherIcon.src = "images/weather-app/clouds.png"
         } else if (data.weather[0].main == "Clear") {
-            weatherIcon.src = "images/clear.png"
+            weatherIcon.src = "images/weather-app/clear.png"
         } else if (data.weather[0].main == "Rain") {
-            weatherIcon.src = "images/rain.png"
+            weatherIcon.src = "images/weather-app/rain.png"
         } else if (data.weather[0].main == "Drizzle") {
-            weatherIcon.src = "images/drizzle.png"
+            weatherIcon.src = "images/weather-app/drizzle.png"
         } else if (data.weather[0].main == "Mist") {
-            weatherIcon.src = "images/mist.png"
+            weatherIcon.src = "images/weather-app/mist.png"
         } else if (data.weather[0].main == "Snow") {
-            weatherIcon.src = "images/snow.png"
+            weatherIcon.src = "images/weather-app/snow.png"
         }
 
         document.querySelector(".weather").style.display = "block"
