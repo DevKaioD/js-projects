@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/to-do-app/icon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="to-do-list.css">
-    <title>To do list | Test</title>
+    <title>To-do list | Test</title>
 </head>
 
 <body>
@@ -14,8 +15,13 @@
             <h2>To-do List</h2>
             <div class="row">
                 <input type="text" id="inputBox" placeholder="Insert your text">
-                <button> Add</button>
+                <button onclick="addTask()"> Add</button>
             </div>
+            <div class="error">
+                <p>You must write something!</p>
+            </div>
+            <ul id="listContainer">
+            </ul>
         </div>
 
     </div>

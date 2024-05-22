@@ -8,7 +8,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(170deg, #fc5000, #ff9900);
+    background: linear-gradient(170deg, #FC5C44, #520b00);
     padding: 10px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .to-do h2 {
-    color: #1f0a01;
+    color: #350700;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f1d9b3;
+    background: #fcd9d3;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -51,9 +51,80 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #fc5000;
+    background: #FC5C44;
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    
+}
+
+button:hover {
+    background: #f83618;
+    transition: .5s;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    line-height: 30px;
+}
+
+ul li:hover{
+    background-color: #e6e6e6;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/to-do-app/unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/to-do-app/checked.svg);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: .2s;
+}
+
+ul li span:hover {
+    background: #FC5C44;
+    border-radius: 50%;
+    color: white;
+    
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+    font-weight: 600;
 }
