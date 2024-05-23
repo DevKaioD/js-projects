@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+}
+
+body {
+    background:#343434;
+}
+
+.app {
+    background: #fcfad0;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 100px auto 0;
+    padding: 30px;
+}
+
+.app h1 {
+    font-weight: 25px;
+    color: #c70f1f;
+    font-weight: 600;
+    border-bottom: 1px solid #343434;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
