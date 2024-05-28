@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Major Mono Display", monospace;
+    font-family: "Poppin", sans-serif;
 }
 
 .container {
@@ -45,4 +45,18 @@ nav .circle {
     border-radius: 50%;
     border: 10px solid #fff;
     box-shadow: 0 5px 10px rgba(4,13,18, 0.22);
+}
+
+.musicPlayer h1 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #040D12;
+    margin-top: 20px;
+}
+
+.musicPlayer p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #040D12;
+    margin-top: 5px;
 }
