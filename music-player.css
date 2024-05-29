@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppin", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -39,6 +38,7 @@ nav .circle {
     color: #040D12;
     box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
     cursor: pointer;
+    transition: all .3s;
 }
 
 .songImg {
@@ -46,6 +46,7 @@ nav .circle {
     border-radius: 50%;
     border: 10px solid #fff;
     box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
+    transition: all .3s;
 }
 
 .musicPlayer h1 {
@@ -79,14 +80,33 @@ nav .circle {
     justify-content: center;
     border-radius: 50%;
     color: #183D3D;
-    box-shadow: rgba(4, 13, 18, 0.22);
+    box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
     cursor: pointer;
+    transition: all .3s;
 }
 
 .controls div:nth-child(2) {
     transform: scale(1.5);
     background-color: #183D3D;
     color: #fff;
+}
+
+.controls div:hover {
+    background-color: #296969;
+    color: #fff;
+}
+
+.controls div:nth-child(2):hover {
+    background-color: #296969;
+}
+
+nav .circle:hover {
+    background-color: #296969;
+    color: #fff;
+}
+
+.songImg:hover {
+    transform: scale(1.1);
 }
 
 #progress {
