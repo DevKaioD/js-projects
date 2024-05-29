@@ -18,7 +18,7 @@
 
 .musicPlayer {
     background: #93B1A6;
-    width: 400px;
+    width: 500px;
     padding: 25px 35px;
     text-align: center;
 }
@@ -127,4 +127,24 @@ nav .circle:hover {
     border-radius: 50%;
     border: 8px solid #fff;
     box-shadow: 0 5px 5px rgba(4, 13, 18, 0.22);
+}
+
+#volume {
+    width: 90px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #183D3D;
+    border-radius: 10px;
+    margin-right: -70px;
+    margin-bottom: -20px;
+    transform: rotate(-90deg);
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
 }

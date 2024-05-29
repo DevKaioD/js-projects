@@ -2,15 +2,14 @@ let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
 let songTitle = document.getElementById("songTitle");
-let artistTitle =  document.getElementById("artistTitle");
-let volume = document.getElementById("volume");
-let volumeBar = document.getElementById("volumeBar");
+let artistTitle = document.getElementById("artistTitle");
+let volumeControl = document.getElementById("volume");
 
 let playlist = [
-    {   title: "A Crush On You", artist: "L i v e r r Z z", src: "audio/A Crush On You.mp3"},
-    {   title: "Molly", artist: "Playboi Carti, Noctis", src: "audio/Molly-Playboi Carti (Noctis Remix).mp3"},
-    {   title: "Late Call", artist: "L i v e r r Z z", src: "audio/Late Call.mp3"},
-]
+    { title: "A Crush On You", artist: "L i v e r r Z z", src: "audio/A Crush On You.mp3" },
+    { title: "Molly", artist: "Playboi Carti, Noctis", src: "audio/Molly-Playboi Carti (Noctis Remix).mp3" },
+    { title: "Late Call", artist: "L i v e r r Z z", src: "audio/Late Call.mp3" },
+];
 
 let currentSongIndex = 0;
 
@@ -22,7 +21,7 @@ function loadSong(index) {
     playPause();
 }
 
-song.onloadedmetadata = function () {
+song.onloadedmetadata = function() {
     progress.max = song.duration;
     progress.value = song.currentTime;
 }
@@ -45,7 +44,7 @@ setInterval(() => {
     }
 }, 500);
 
-progress.oninput = function () {
+progress.oninput = function() {
     song.currentTime = progress.value;
     if (song.paused) {
         song.play();
@@ -54,11 +53,11 @@ progress.oninput = function () {
     }
 }
 
-progress.onchange = function () {
+progress.onchange = function() {
     song.currentTime = progress.value;
 }
 
-song.onended = function () {
+song.onended = function() {
     ctrlIcon.classList.remove("fa-pause");
     ctrlIcon.classList.add("fa-play");
     currentSongIndex = (currentSongIndex + 1) % playlist.length;
@@ -92,19 +91,5 @@ function previousSong() {
 }
 
 volumeControl.oninput = function() {
-    song.volume =  this.value;
-    updateVolumeBar(this.value);
-}
-
-volumeControl.onmouseover = function() {
-    volumeBar.classList.add("active");
-}
-
-volumeControl.onmouseout =  function() {
-    volumeBar.classList.remove("active");
-}
-
-function updatevolumeBar(volume) {
-    let height = volume * 100 + "%";
-    volumeBar.style.height = height;
+    song.volume = this.value;
 }
