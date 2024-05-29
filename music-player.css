@@ -37,14 +37,14 @@ nav .circle {
     line-height: 40px;
     background: #fff;
     color: #040D12;
-    box-shadow: 0 5px 10px rgba(4,13,18, 0.22);
-}   
+    box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
+}
 
 .songImg {
     width: 220px;
     border-radius: 50%;
     border: 10px solid #fff;
-    box-shadow: 0 5px 10px rgba(4,13,18, 0.22);
+    box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
 }
 
 .musicPlayer h1 {
@@ -59,4 +59,49 @@ nav .circle {
     font-weight: 500;
     color: #040D12;
     margin-top: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #183D3D;
+    box-shadow: rgba(4, 13, 18, 0.22);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2) {
+    transform: scale(1.5);
+    background-color: #183D3D;
+    color: #fff;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #183D3D;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #183D3D;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(4, 13, 18, 0.22);
 }
