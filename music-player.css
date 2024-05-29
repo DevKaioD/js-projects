@@ -38,6 +38,7 @@ nav .circle {
     background: #fff;
     color: #040D12;
     box-shadow: 0 5px 10px rgba(4, 13, 18, 0.22);
+    cursor: pointer;
 }
 
 .songImg {
@@ -71,6 +72,7 @@ nav .circle {
     width: 60px;
     height: 60px;
     margin: 20px;
+    margin-top: 40px;
     background: #fff;
     display: inline-flex;
     align-items: center;
@@ -94,6 +96,7 @@ nav .circle {
     background: #183D3D;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #progress::-webkit-slider-thumb {
