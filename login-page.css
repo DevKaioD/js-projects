@@ -14,6 +14,19 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+form.signIn-form {
+    z-index: 2;
+}
+
+form.signUp-form {
+    z-index: 1;
+    opacity: 0;
 }
 
 .container {
@@ -23,12 +36,34 @@ form {
     overflow: hidden;
 }
 
+.container::before {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #3c7561, #63c0a0);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+}
+
 .formContainer {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.signIn-signUp {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .title {
@@ -71,7 +106,7 @@ form {
     font-weight: 500;
 }
 
-.btnSolid {
+.btn {
     width: 150px;
     height: 49px;
     border: 1px solid #4e977e;
@@ -82,11 +117,11 @@ form {
     color: #4e977e;
     font-weight: 600;
     text-transform: uppercase;
-    transition: .4s;
+    transition: .5s;
     margin: 10px 0;
 }
 
-.btnSolid:hover {
+.btn:hover {
     background-color: #63c0a0;
     border: 1px solid #63c0a0;
     color: #fff;
@@ -111,4 +146,14 @@ form {
     border: 1px solid #4e977e;
     margin: 0 0.45rem;
     text-decoration: none;
+    color: #4e977e;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.socialIcons:hover {
+    background: #63c0a0;
+    border: 1px solid #63c0a0;
+    color: #fff;
 }
