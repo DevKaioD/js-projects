@@ -46,6 +46,8 @@ form.signUp-form {
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
 }
 
 .formContainer {
@@ -64,6 +66,7 @@ form.signUp-form {
     width: 50%;
     display: grid;
     grid-template-columns: 1fr;
+    z-index: 5;
 }
 
 .title {
@@ -109,22 +112,21 @@ form.signUp-form {
 .btn {
     width: 150px;
     height: 49px;
-    border: 1px solid #4e977e;
+    border: none;
     outline: none;
     border-radius: 55px;
     cursor: pointer;
-    background-color: transparent;
-    color: #4e977e;
+    background-color: #4e977e;
+    color: #fff;
     font-weight: 600;
     text-transform: uppercase;
     transition: .5s;
     margin: 10px 0;
+    font-size: 17px;
 }
 
 .btn:hover {
     background-color: #63c0a0;
-    border: 1px solid #63c0a0;
-    color: #fff;
 }
 
 .socialAccounts {
@@ -156,4 +158,67 @@ form.signUp-form {
     background: #63c0a0;
     border: 1px solid #63c0a0;
     color: #fff;
+}
+
+.panelsContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.left-panel {
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+    color: #fff;
+}
+
+.panel h3 {
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    font-size: 14px;
+}
+
+.right-panel .content, .right-panel .image {
+    transform: translateX(800px);
+}
+
+.image {
+    width: 100%;
 }
