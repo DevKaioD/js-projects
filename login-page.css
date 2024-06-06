@@ -44,7 +44,7 @@ form.signUp-form {
     border-radius: 50%;
     background: linear-gradient(-45deg, #3c7561, #63c0a0);
     top: -10%;
-    right: 48%;
+    right: 42%;
     transform: translateY(-50%);
     z-index: 6;
     transition: 1.8s ease-in-out;
