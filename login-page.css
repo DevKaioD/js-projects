@@ -18,6 +18,7 @@ form {
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    transition: .2s .7s ease-in-out;
 }
 
 form.signIn-form {
@@ -67,6 +68,7 @@ form.signUp-form {
     display: grid;
     grid-template-columns: 1fr;
     z-index: 5;
+    transition: 1s .7s ease-in-out;
 }
 
 .title {
@@ -101,7 +103,7 @@ form.signUp-form {
     line-height: 1;
     font-weight: 600;
     font-size: 1.1rem;
-    color:#3c7561;
+    color: #3c7561;
 }
 
 .inputField input::placeholder {
@@ -118,7 +120,7 @@ form.signUp-form {
     cursor: pointer;
     background-color: #4e977e;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     transition: .5s;
     margin: 10px 0;
@@ -143,7 +145,7 @@ form.signUp-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:46px;
+    height: 46px;
     width: 46px;
     border: 1px solid #4e977e;
     margin: 0 0.45rem;
@@ -191,6 +193,7 @@ form.signUp-form {
 
 .panel .content {
     color: #fff;
+    transition: .9s .6s ease-in-out;
 }
 
 .panel h3 {
@@ -215,10 +218,55 @@ form.signUp-form {
     font-size: 14px;
 }
 
-.right-panel .content, .right-panel .image {
+.btn.transparent:hover {
+    background: #fff;
+    color: #4e977e;
+    border: 2px solid #fff;
+}
+
+.right-panel .content,
+.right-panel .image {
     transform: translateX(800px);
 }
 
 .image {
     width: 100%;
+    transition: 1.1s .4s ease-in-out;
+}
+
+.container.signUp-mode::before {
+    transform: translate(100%, -50%);
+    right: 58%;
+}
+
+.container.signUp-mode .left-panel .image,
+.container.signUp-mode .left-panel .content {
+    transform: translateX(-800px);
+}
+
+.container.signUp-mode .left-panel {
+    pointer-events: none;
+}
+
+.container.signUp-mode .right-panel .image,
+.container.signUp-mode .right-panel .content {
+    transform: translateX(0px);
+}
+
+.container.signUp-mode .right-panel {
+    pointer-events: all;
+}
+
+.container.signUp-mode .signIn-signUp {
+    left: 25%;
+}
+
+.container.signUp-mode form.signIn-form {
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.signUp-mode form.signUp-form {
+    z-index: 2;
+    opacity: 1;
 }
